@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-08-26 Mon 15:16 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="VLEAD" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgcea382b">1. Introduction</a></li>
+<li><a href="#org9f889e9">2. Function to reset edge</a></li>
+<li><a href="#org9d665c1">3. Function to get a newgraph</a></li>
+<li><a href="#org7a07eda">4. Function to reset current graph</a></li>
+<li><a href="#org37fd0ee">5. Setting variables to '0'(initial value)</a></li>
+<li><a href="#org01d070f">6. Makes the graph and call kruskal</a></li>
+<li><a href="#org89b70f4">7. Makes the graph and call kruskal</a></li>
+<li><a href="#org5986ea9">8. Set two types of changes onclick of an edge.</a></li>
+<li><a href="#org032c12f">9. Set onclick for clicking on graph.</a></li>
+<li><a href="#org9f19414">10. Tangle</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgcea382b" class="outline-2">
+<h2 id="orgcea382b"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This document builds the functionality with JavaScript to
+add behaviour/interactivity to the " Kruskals "
+Practice artefact(HTML).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f889e9" class="outline-2">
+<h2 id="org9f889e9"><span class="section-number-2">2</span> Function to reset edge</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+<pre class="src src-js" id="orgaf1ab02">
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">resetedge</span>(<span style="font-weight: bold; font-style: italic;">edgeID</span>){
+    <span style="font-weight: bold;">if</span>(edgeID){
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">clickedEdge</span> = edges.get(edgeID);
+    clickedEdge.color = {
+      color: <span style="font-style: italic;">'#000000'</span>,
+      highlight:<span style="font-style: italic;">'#000000'</span>,
+      highlightwidth: 0
+    };
+    clickedEdge.width=2.0;
+    clickedEdge.selectionWidth=0;
+  edges.update(clickedEdge);
+  }
+  }
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9d665c1" class="outline-2">
+<h2 id="org9d665c1"><span class="section-number-2">3</span> Function to get a newgraph</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-src-container">
+<pre class="src src-js" id="org2eb4d42"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">regen</span>(){
+    location.reload();
+  }
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7a07eda" class="outline-2">
+<h2 id="org7a07eda"><span class="section-number-2">4</span> Function to reset current graph</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+<pre class="src src-js" id="org12a3f11">
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">reset</span>(){
+  addedEdges=0;
+  flag_1=0;
+  <span style="font-weight: bold;">for</span> (i <span style="font-weight: bold;">in</span> ans[0]){
+    resetedge(ans[0][i]);
+  }
+  
+  document.getElementById(<span style="font-style: italic;">"ins"</span>).innerHTML=<span style="font-style: italic;">""</span>;
+  graph.setOptions({
+  interaction:{
+    selectable:<span style="font-weight: bold; text-decoration: underline;">true</span>
+  }
+});
+
+ans=onresetans;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">nOfundos</span>=fin.length;
+console.log(<span style="font-style: italic;">"fin "</span>+fin);
+<span style="font-weight: bold;">for</span>(i=0;i&lt;nOfundos;i++)undo();
+<span style="font-weight: bold;">if</span>(setTime){clearInterval(setTime)}
+ document.getElementById(<span style="font-style: italic;">"ins"</span>).innerHTML=<span style="font-style: italic;">""</span>;
+ document.getElementById(<span style="font-style: italic;">"startnext"</span>).innerHTML=<span style="font-style: italic;">"Start"</span>;
+ document.getElementById(<span style="font-style: italic;">"pause"</span>).innerHTML=<span style="font-style: italic;">"Pause"</span>;
+ paused=0;
+ flag_start=0;
+     
+}
+
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org37fd0ee" class="outline-2">
+<h2 id="org37fd0ee"><span class="section-number-2">5</span> Setting variables to '0'(initial value)</h2>
+<div class="outline-text-2" id="text-5">
+<div class="org-src-container">
+<pre class="src src-js" id="orgf0f2f20">    
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">flag_1</span>=0;
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org01d070f" class="outline-2">
+<h2 id="org01d070f"><span class="section-number-2">6</span> Makes the graph and call kruskal</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Gets nodes , edges from data</li>
+<li>Makes respective graph and calls Kruskals on it</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-js" id="org183bc6d">    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">graphNo</span>=getRandom();
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">nodes</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">vis.DataSet</span> (graphSet[graphNo][0]);
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">edges</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">vis.DataSet</span> (graphSet[graphNo][1]);
+  graphs[graphNo]();
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">container</span> = document.getElementById(<span style="font-style: italic;">'graph'</span>);
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">data</span> = {
+  nodes: nodes,
+  edges: edges
+  };
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">graph</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">vis.Network</span>(container, data, {});
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">onresetans</span>=ans;
+
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org89b70f4" class="outline-2">
+<h2 id="org89b70f4"><span class="section-number-2">7</span> Makes the graph and call kruskal</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Configure the graphs using visjs documentation</li>
+<li>setOptions is function from visjs library which takes json input of</li>
+</ul>
+<p>
+options and set them to the graph.
+</p>
+<div class="org-src-container">
+<pre class="src src-js" id="orgdda8a89">
+
+graph.setOptions({
+clickToUse:<span style="font-weight: bold; text-decoration: underline;">true</span>,
+  nodes:{
+          fixed:<span style="font-weight: bold; text-decoration: underline;">false</span>,
+          borderWidth: 2,
+          borderWidthSelected: 0,
+          
+            color: {
+              border: <span style="font-style: italic;">"#2C9AD1"</span>,
+              background: <span style="font-style: italic;">"#ffffff"</span>,
+              highlight: {
+                border: <span style="font-style: italic;">"#2C9AD1"</span>,
+              background: <span style="font-style: italic;">"#ffffff"</span>,
+                
+              },
+              hover: {
+                border: <span style="font-style: italic;">"#2C9AD1"</span>,
+              background: <span style="font-style: italic;">"#ffffff"</span>,
+                
+              }
+            },
+            shape:<span style="font-style: italic;">'circle'</span>,
+            scaling:{
+              label:{
+              enabled:<span style="font-weight: bold; text-decoration: underline;">true</span>,
+              min:25,
+              max:25
+              }
+            },
+            value:1
+          },
+        
+        interaction: {
+          dragView:<span style="font-weight: bold; text-decoration: underline;">false</span>,
+          selectable:<span style="font-weight: bold; text-decoration: underline;">false</span>,
+          zoomView: <span style="font-weight: bold; text-decoration: underline;">false</span>,
+          selectConnectedEdges: <span style="font-weight: bold; text-decoration: underline;">false</span>,
+          hover: <span style="font-weight: bold; text-decoration: underline;">false</span>,
+          hoverConnectedEdges: <span style="font-weight: bold; text-decoration: underline;">false</span>,
+          keyboard: {
+                enabled: <span style="font-weight: bold; text-decoration: underline;">true</span>,
+                bindToWindow:<span style="font-weight: bold; text-decoration: underline;">true</span>
+            },
+            navigationButtons: <span style="font-weight: bold; text-decoration: underline;">true</span>,
+            zoomView: <span style="font-weight: bold; text-decoration: underline;">false</span>
+        
+        },
+        physics: {enabled: <span style="font-weight: bold; text-decoration: underline;">false</span>,
+        stabilization:<span style="font-weight: bold; text-decoration: underline;">false</span>},
+        edges:{
+            scaling:{
+              min:1,
+              max:3,
+              label:{
+              enabled:<span style="font-weight: bold; text-decoration: underline;">true</span>,
+              min:20,
+              max:20
+              }
+            },
+            value:1,
+          hoverWidth:0,
+          selectionWidth: 0,
+          font: {background: <span style="font-style: italic;">'white'</span>,color:<span style="font-style: italic;">"#000000"</span>},
+          width: 2,
+          labelHighlightBold: <span style="font-weight: bold; text-decoration: underline;">false</span>,
+          color : {
+      inherit: <span style="font-weight: bold; text-decoration: underline;">false</span>,
+      color: <span style="font-style: italic;">"#000000"</span>,
+      opacity: 2.0,
+      hover:<span style="font-style: italic;">"#000000"</span>,     
+      highlight:<span style="font-style: italic;">"#000000"</span>,
+    },
+    chosen : {
+      inherit: <span style="font-weight: bold; text-decoration: underline;">false</span>
+    },
+
+arrows: {
+  to:     {enabled: <span style="font-weight: bold; text-decoration: underline;">false</span>, scaleFactor:1, type:<span style="font-style: italic;">'arrow'</span>},
+  middle: {enabled: <span style="font-weight: bold; text-decoration: underline;">true</span>, scaleFactor:1, type:<span style="font-style: italic;">'arrow'</span>},
+  from:   {enabled: <span style="font-weight: bold; text-decoration: underline;">false</span>, scaleFactor:1, type:<span style="font-style: italic;">'arrow'</span>}
+  
+},
+chosen:{
+
+},
+physics: <span style="font-weight: bold; text-decoration: underline;">false</span>
+}}
+
+);
+
+
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org5986ea9" class="outline-2">
+<h2 id="org5986ea9"><span class="section-number-2">8</span> Set two types of changes onclick of an edge.</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>Configure the changes when edges are clicked.</li>
+<li>when these functions are called repective changes happen to clciked edges.</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-js" id="org5daf291">
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">clickednode</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>){
+
+<span style="font-weight: bold;">if</span> (nodeID) {
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">clickedNode</span> = nodes.get(nodeID);
+console.log(clickedNode)
+clickedNode.color = {
+  border: <span style="font-style: italic;">'#B22222'</span>
+}
+nodes.update(clickedNode);
+}
+}
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">clickededge1</span>(<span style="font-weight: bold; font-style: italic;">edgeID</span>){
+  <span style="font-weight: bold;">if</span>(edgeID){
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">clickedEdge</span> = edges.get(edgeID);
+  clickedEdge.color = {
+    color: <span style="font-style: italic;">'#00008b'</span>,
+    highlight:<span style="font-style: italic;">'#00008b'</span>,
+    hover:<span style="font-style: italic;">'#00008b'</span>
+  }
+edges.update(clickedEdge);
+}
+} 
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">clickededge2</span>(<span style="font-weight: bold; font-style: italic;">edgeID</span>){
+  <span style="font-weight: bold;">if</span>(edgeID){
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">clickedEdge</span> = edges.get(edgeID);
+  clickedEdge.color = {
+    color: <span style="font-style: italic;">'brown'</span>,
+    highlight:<span style="font-style: italic;">"brown"</span>,
+    hover:<span style="font-style: italic;">"brown"</span>
+  }
+  clickedEdge.width = <span style="font-style: italic;">'1.5'</span>;
+edges.update(clickedEdge);
+}
+}
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">clickededge3</span>(<span style="font-weight: bold; font-style: italic;">edgeID</span>){
+  <span style="font-weight: bold;">if</span>(edgeID){
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">clickedEdge</span> = edges.get(edgeID);
+  console.log(edgeID);
+  clickedEdge.color = {
+    color: <span style="font-style: italic;">'#83F52C'</span>,
+    highlight: <span style="font-style: italic;">"#83F52C"</span>,
+    hover: <span style="font-style: italic;">"#83F52C"</span>
+  }
+  clickedEdge.width = 1.5;
+edges.update(clickedEdge);
+console.log(edgeID+<span style="font-style: italic;">"3click"</span>);
+}
+}
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">clickednode1</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>){
+  
+  <span style="font-weight: bold;">if</span> (nodeID) {
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">clickedNode</span> = nodes.get(nodeID);
+  
+  clickedNode.hidden=<span style="font-weight: bold; text-decoration: underline;">true</span>;
+  nodes.update(clickedNode);
+  }
+  }
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">clickednode2</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>){
+
+  <span style="font-weight: bold;">if</span> (nodeID) {
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">clickedNode</span> = nodes.get(nodeID);
+  
+  clickedNode.hidden=<span style="font-weight: bold; text-decoration: underline;">false</span>;
+  nodes.update(clickedNode);
+  }
+  }
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">clickednode3</span>(<span style="font-weight: bold; font-style: italic;">nodeID</span>){
+
+  
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">clickedNode</span> = nodeID;
+  
+  clickedNode.hidden=<span style="font-weight: bold; text-decoration: underline;">false</span>;
+  nodes.update(clickedNode);
+  
+  }
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">networkCanvas</span> = document.getElementById(<span style="font-style: italic;">"graph"</span>).getElementsByTagName(<span style="font-style: italic;">"canvas"</span>)[0]
+  
+ 
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org032c12f" class="outline-2">
+<h2 id="org032c12f"><span class="section-number-2">9</span> Set onclick for clicking on graph.</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>Configure the changes when edges are clicked.</li>
+<li>Onclcik on graph it gives edges (or) nodes</li>
+</ul>
+<p>
+that are clicked as parameter into onclick function
+</p>
+<ul class="org-ul">
+<li>Configure functions to be triggered on click
+of nodes according to Kruskals.</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-js" id="orgd8b16e0">
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">fin</span>=[];
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">paused</span>=0;
+  <span style="font-weight: bold;">function</span>  <span style="font-weight: bold;">demo</span>(){
+    <span style="font-weight: bold;">if</span>(paused==1)<span style="font-weight: bold;">return</span>;
+     time=5000-(document.getElementById(<span style="font-style: italic;">"myRange"</span>).value)*50;
+   
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">printarr</span>=[];
+    <span style="font-weight: bold;">for</span> (i <span style="font-weight: bold;">in</span> ans){
+      <span style="font-weight: bold;">if</span>(ans[i]==0 &amp;&amp; i!=0){
+        printarr.push(i);
+      }
+    }
+    <span style="font-weight: bold;">if</span>(printarr[0]){
+    g.toposort(printarr[0]);
+    
+    document.getElementById(<span style="font-style: italic;">"ins"</span>).innerHTML=<span style="font-style: italic;">"Nodes "</span>+printarr+<span style="font-style: italic;">" have indegree 0"</span>+<span style="font-style: italic;">" . So, any of these nodes can be added to sorted array"</span>+<span style="font-style: italic;">" &lt;br&gt; Adding node "</span>+printarr[0]+<span style="font-style: italic;">" to sorted order"</span>
+    clickednode1(printarr[0]);
+    fin.push(printarr[0]);
+     document.getElementById(<span style="font-style: italic;">"seq"</span>).innerHTML=<span style="font-style: italic;">"&lt;b&gt;Sorted Order : &lt;/b&gt;"</span>+fin;
+   
+  }
+    <span style="font-weight: bold;">if</span>(paused==0 ){
+    clearInterval(setTime);
+  setTime = setInterval(demo,time);
+      }
+}
+ <span style="font-weight: bold;">function</span>  <span style="font-weight: bold;">demo1</span>(){
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">printarr</span>=[];
+    <span style="font-weight: bold;">for</span> (i <span style="font-weight: bold;">in</span> ans){
+      <span style="font-weight: bold;">if</span>(ans[i]==0 &amp;&amp; i!=0){
+        printarr.push(i);
+      }
+    }
+    <span style="font-weight: bold;">if</span>(printarr[0]){
+    g.toposort(printarr[0]);
+    
+    document.getElementById(<span style="font-style: italic;">"ins"</span>).innerHTML=<span style="font-style: italic;">"Nodes "</span>+printarr+<span style="font-style: italic;">" have indegree 0"</span>+<span style="font-style: italic;">" . So, any of these nodes can be added to sorted array"</span>+<span style="font-style: italic;">" &lt;br&gt; Adding node "</span>+printarr[0]+<span style="font-style: italic;">" to sorted order"</span>
+    clickednode1(printarr[0]);
+    fin.push(printarr[0]);
+     document.getElementById(<span style="font-style: italic;">"seq"</span>).innerHTML=<span style="font-style: italic;">"&lt;b&gt;Sorted Order : &lt;/b&gt;"</span>+fin;
+   
+  }
+}
+
+
+ <span style="font-weight: bold;">function</span> <span style="font-weight: bold;">playPause</span>(){
+    <span style="font-weight: bold;">if</span> (paused==0){paused=1;document.getElementById(<span style="font-style: italic;">"pause"</span>).innerHTML=<span style="font-style: italic;">"Play"</span>}
+    <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span>(paused==1){paused=0;document.getElementById(<span style="font-style: italic;">"pause"</span>).innerHTML=<span style="font-style: italic;">"Pause"</span>;};
+  }
+
+
+
+  graph.on(<span style="font-style: italic;">"click"</span>, <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">params</span>) {
+    <span style="font-weight: bold;">return</span>;
+  });
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">flag_start</span>=0;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">setTime</span>;
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">start</span>(){
+    <span style="font-weight: bold;">if</span>(flag_start==0){
+    setTime = setInterval(demo,2500);
+      document.getElementById(<span style="font-style: italic;">"startnext"</span>).innerHTML=<span style="font-style: italic;">"Next"</span>;
+      flag_start=1;
+    
+    }
+  <span style="font-weight: bold;">else</span>{
+    clearInterval(setTime);
+    demo1();
+    setTime = setInterval(demo,2500);
+  }
+  }
+
+
+  <span style="font-weight: bold;">function</span> <span style="font-weight: bold;">undo</span>(){
+    
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">a</span>=fin.pop()
+    g.revtoposort(a);
+    clickednode2(a);
+    document.getElementById(<span style="font-style: italic;">"seq"</span>).innerHTML=<span style="font-style: italic;">"&lt;b&gt;Sorted Order : &lt;/b&gt;"</span>+fin;
+      
+  }
+
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org9f19414" class="outline-2">
+<h2 id="org9f19414"><span class="section-number-2">10</span> Tangle</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-src-container">
+<pre class="src src-js">&lt;&lt;reset-edge&gt;&gt;
+&lt;&lt;regen-graph&gt;&gt;
+&lt;&lt;reset-graph&gt;&gt;
+&lt;&lt;initialize-variables&gt;&gt;
+&lt;&lt;make-graph&gt;&gt;
+&lt;&lt;configure-graph&gt;&gt;
+&lt;&lt;set-edgechanges&gt;&gt;
+&lt;&lt;set-onclick&gt;&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: VLEAD</p>
+<p class="date">Created: 2019-08-26 Mon 15:16</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

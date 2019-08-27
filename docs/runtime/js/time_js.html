@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-08-26 Mon 15:16 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="VLEAD" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org9ac91a9">1. Javascript for artefact</a>
+<ul>
+<li><a href="#org50f39ef">1.1. Declaration of arrays and variables</a></li>
+</ul>
+</li>
+<li><a href="#orgeec3c45">2. Function Randomise</a></li>
+<li><a href="#org560f923">3. Function Change Interval</a></li>
+<li><a href="#org0e6cb00">4. Function compare</a></li>
+<li><a href="#orga4a9c19">5. Function Swap</a></li>
+<li><a href="#org1167a3d">6. Function Opti_Bubble</a></li>
+<li><a href="#org8f3af76">7. Function next step</a></li>
+<li><a href="#org758ef9d">8. Function Pause</a></li>
+<li><a href="#org49547ee">9. Function Start sort</a></li>
+<li><a href="#org384b779">10. Choosing ordering or array</a></li>
+<li><a href="#orgf45eab2">11. Function reload</a></li>
+<li><a href="#org8b83190">12. Function setcounter</a></li>
+<li><a href="#org9e6bff1">13. Tangle</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9ac91a9" class="outline-2">
+<h2 id="org9ac91a9"><span class="section-number-2">1</span> Javascript for artefact</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org50f39ef" class="outline-3">
+<h3 id="org50f39ef"><span class="section-number-3">1.1</span> Declaration of arrays and variables</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="org-src-container">
+<pre class="src src-js" id="org400f2dd">
+<span style="font-weight: bold;">class</span> Bubble_sort{
+  constructor(){
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.iterator1 = 0;
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">iteratro1 -&gt; Used to keep track while traversing the array</span>
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.iterator2 = 0;
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">iterator2 -&gt; Used to keep track while traversing the array(iterator1 + 1)</span>
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.finished = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">finished -&gt; Determines whether or not the sort is finished</span>
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.action = 0;
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">action -&gt; Determines the current action being performed</span>
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.fn_name = <span style="font-style: italic;">""</span>;
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">fn_name -&gt; Name of the function (Bubble sort here)</span>
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.card;
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">card -&gt; Variable that corresponds to DOM elements that represent the array</span>
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.comparisons = 0;
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">comparisons -&gt; Counts the number of comparisons</span>
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.swaps = 0;
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">swaps -&gt; Counts the number of swaps</span>
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.operation = <span style="font-style: italic;">""</span>;
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">operation -&gt; Determined current operation</span>
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.interval = 0;
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">interval -&gt; Varialble corresponding to setting and unsetting the slider time interval</span>
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.interval = 0;
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.num = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Array</span>();
+    <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">num -&gt; Variable that stores the array</span>
+    <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; 10; i++)
+      <span style="font-weight: bold; text-decoration: underline;">this</span>.num[i] = 0;
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Array has been initialized to contain all zero values to allocate the memory at the start itse</span>
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.flag = 0;
+    <span style="font-weight: bold; text-decoration: underline;">this</span>.randomcounter = 2;
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">decides which type of array will be displayed</span>
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">0 -&gt; sorted, 1 -&gt; reverse sorted, 2 -&gt; random</span>
+  };
+};
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Creating an object of the Bubble_sort using "let"</span>
+<span style="font-weight: bold;">let</span> <span style="font-weight: bold; font-style: italic;">bubble_artefact</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Bubble_sort</span>();
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeec3c45" class="outline-2">
+<h2 id="orgeec3c45"><span class="section-number-2">2</span> Function Randomise</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Creates an array of size 6 based on type of array required</li>
+<li>Places these random values inside DOM cards</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-js" id="org23bbd90">
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">randomise</span>()
+{ 
+  <span style="font-weight: bold;">if</span>(bubble_artefact.randomcounter == 2){
+      <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; 6; i++) 
+            bubble_artefact.num[i] = Math.floor(Math.random() * 90 + 10);
+    }<span style="font-weight: bold;">else</span>
+    <span style="font-weight: bold;">if</span>(bubble_artefact.randomcounter == 0)
+    {
+      <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">ran</span> = Math.floor(Math.random() * 90 + 10);
+      bubble_artefact.num[0] = ran;
+      <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 1; i &lt; 6; i++) 
+            bubble_artefact.num[i] = bubble_artefact.num[i-1] + Math.floor(Math.random() * 90 + 10);
+    }<span style="font-weight: bold;">else</span>
+    <span style="font-weight: bold;">if</span>(bubble_artefact.randomcounter == 1)
+    {
+      <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">ran</span> = Math.floor(Math.random() * 400 + 400);
+      bubble_artefact.num[0] = ran;
+      <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 1; i &lt; 6; i++) 
+            bubble_artefact.num[i] = bubble_artefact.num[i-1] - Math.floor(Math.random() * 90 + 10);
+    }
+    bubble_artefact.card = document.querySelectorAll(<span style="font-style: italic;">'.card'</span>);
+  <span style="font-weight: bold;">for</span>(<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span>=0;i&lt;6;i++)
+  {
+    bubble_artefact.card[i].innerHTML = bubble_artefact.num[i];
+    bubble_artefact.card[i].style.fontStyle = <span style="font-style: italic;">"normal"</span>;
+    bubble_artefact.card[i].style.color = <span style="font-style: italic;">"white"</span>;
+    bubble_artefact.card[i].style.backgroundColor = <span style="font-style: italic;">"#288ec8"</span>;
+  }
+  bubble_artefact.flag=0;
+};
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org560f923" class="outline-2">
+<h2 id="org560f923"><span class="section-number-2">3</span> Function Change Interval</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Supports changing time interval when the slider is changed in the webpage</li>
+<li>Also, changes the background colour of Pause button if required</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-js" id="org3e28fee">
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">change_interval</span>()
+{
+  <span style="font-weight: bold;">if</span>(bubble_artefact.interval != 0) { clearInterval(bubble_artefact.interval); }
+  
+  <span style="font-weight: bold;">if</span>(document.getElementById(<span style="font-style: italic;">"interval"</span>).value != 100)
+  {
+    <span style="font-weight: bold;">if</span>(bubble_artefact.fn_name &gt; <span style="font-style: italic;">""</span>) { bubble_artefact.interval = setInterval(next_step, 2600-document.getElementById(<span style="font-style: italic;">"interval"</span>).value); }
+    document.getElementById(<span style="font-style: italic;">"pause"</span>).style.backgroundColor = <span style="font-style: italic;">"#288ec8"</span>;
+  }
+  <span style="font-weight: bold;">else</span>
+    document.getElementById(<span style="font-style: italic;">"pause"</span>).style.backgroundColor = <span style="font-style: italic;">"grey"</span>;
+};
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0e6cb00" class="outline-2">
+<h2 id="org0e6cb00"><span class="section-number-2">4</span> Function compare</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Compares two given numbers given as input to it</li>
+<li>Highlights numbers that are under consideration by changing their background colour</li>
+<li>Returns True if the swap has to be performed</li>
+<li>Return False otherwise</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-js" id="org2f51ed7"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">compare</span>(<span style="font-weight: bold; font-style: italic;">i</span>, <span style="font-weight: bold; font-style: italic;">j</span>)
+{
+  bubble_artefact.comparisons++;
+  <span style="font-weight: bold;">for</span>(<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">n</span> = 0; n &lt; 6; n++)
+  {
+    <span style="font-weight: bold;">if</span>(n == i || n == j) 
+    {
+      <span style="font-weight: bold;">if</span>(bubble_artefact.card[n].style.backgroundColor != <span style="font-style: italic;">"grey"</span> || !bubble_artefact.flag) 
+        bubble_artefact.card[n].style.backgroundColor = <span style="font-style: italic;">"#a4c652"</span>;
+    }<span style="font-weight: bold;">else</span> 
+    { 
+      <span style="font-weight: bold;">if</span>(bubble_artefact.card[n].style.backgroundColor != <span style="font-style: italic;">"grey"</span> &amp;&amp; !bubble_artefact.flag)
+        bubble_artefact.card[n].style.backgroundColor = <span style="font-style: italic;">"#288ec8"</span>; 
+    }
+  }
+  document.getElementById(<span style="font-style: italic;">"ins"</span>).innerHTML = <span style="font-style: italic;">"&lt;p&gt;&lt;strong&gt;Comparisons: "</span> + bubble_artefact.comparisons ;
+  
+  <span style="font-weight: bold;">if</span>(eval(bubble_artefact.card[j].innerHTML) &lt; eval(bubble_artefact.card[i].innerHTML))
+    <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">true</span>;
+  <span style="font-weight: bold;">else</span>
+    <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+};
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga4a9c19" class="outline-2">
+<h2 id="orga4a9c19"><span class="section-number-2">5</span> Function Swap</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Swaps the two elements whose indices are given as input</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-js" id="org9844400">
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">swap</span>(<span style="font-weight: bold; font-style: italic;">i</span>, <span style="font-weight: bold; font-style: italic;">j</span>)
+{
+  bubble_artefact.swaps++;
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">temp</span>;
+  document.getElementById(<span style="font-style: italic;">"ins"</span>).innerHTML = document.getElementById(<span style="font-style: italic;">"ins"</span>).innerHTML + <span style="font-style: italic;">"&lt;p&gt;Swapping "</span> + bubble_artefact.card[i].innerHTML + <span style="font-style: italic;">" and "</span> + bubble_artefact.card[j].innerHTML + <span style="font-style: italic;">"&lt;/p&gt;"</span>;
+  temp = eval(bubble_artefact.card[j].innerHTML);
+  bubble_artefact.card[j].innerHTML = eval(bubble_artefact.card[i].innerHTML);
+  bubble_artefact.card[i].innerHTML = temp;
+};
+
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1167a3d" class="outline-2">
+<h2 id="org1167a3d"><span class="section-number-2">6</span> Function Opti_Bubble</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Main driving function for this sorting algorithm</li>
+<li>Updates the values of iterator1 and iterator2 and checks for termination conditions</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-js" id="org5aa7ab1">
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">opti_bubble</span>()
+{
+  <span style="font-weight: bold;">if</span>(bubble_artefact.iterator1 &lt; bubble_artefact.end)
+  {
+    bubble_artefact.iterator1++;
+    bubble_artefact.iterator2++;
+  }
+  <span style="font-weight: bold;">else</span>
+  {
+    <span style="font-weight: bold;">if</span>(bubble_artefact.finished)
+    {
+      <span style="font-weight: bold;">if</span>(document.getElementById(<span style="font-style: italic;">"interval"</span>).value != 100)
+      {
+        clearInterval(bubble_artefact.interval);
+        bubble_artefact.interval = 0;
+      }
+      document.getElementById(<span style="font-style: italic;">"ins"</span>).innerHTML = <span style="font-style: italic;">"&lt;h3&gt;The sort is complete - there were "</span> + bubble_artefact.comparisons + <span style="font-style: italic;">" comparisons and "</span> + bubble_artefact.swaps + <span style="font-style: italic;">" swaps.&lt;/h3&gt;"</span>;
+      document.getElementById(<span style="font-style: italic;">"next"</span>).style.backgroundColor = <span style="font-style: italic;">"grey"</span>;
+      document.getElementById(<span style="font-style: italic;">"next"</span>).disabled = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+      bubble_artefact.iterator2 = 0;
+    }
+    <span style="font-weight: bold;">else</span>
+    {
+      bubble_artefact.finished = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+      bubble_artefact.iterator1 = 0;
+      bubble_artefact.iterator2 = 1;  
+      bubble_artefact.card[bubble_artefact.end+1].style.backgroundColor = <span style="font-style: italic;">"grey"</span>;
+      bubble_artefact.end--;
+    }
+  }
+};
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8f3af76" class="outline-2">
+<h2 id="org8f3af76"><span class="section-number-2">7</span> Function next step</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Performs operations based on a given action</li>
+<li>Highlights required elements</li>
+<li>Begins a new iteration at the end of a new one (until termination)</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-js" id="org4abbee1">
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">next_step</span>()
+{
+  <span style="font-weight: bold;">if</span>(bubble_artefact.action == 1)
+  {
+    <span style="font-weight: bold;">if</span>(compare(bubble_artefact.iterator1, bubble_artefact.iterator2))
+        bubble_artefact.action = -1;
+    <span style="font-weight: bold;">else</span>
+        window[bubble_artefact.fn_name]();
+  }
+  <span style="font-weight: bold;">else</span>
+  {
+    bubble_artefact.action = 1;
+    <span style="font-weight: bold;">if</span>(bubble_artefact.fn_name == <span style="font-style: italic;">"opti_bubble"</span>) { swap(bubble_artefact.iterator1, bubble_artefact.iterator2); }
+    bubble_artefact.finished = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+    window[bubble_artefact.fn_name]();
+  }
+};
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org758ef9d" class="outline-2">
+<h2 id="org758ef9d"><span class="section-number-2">8</span> Function Pause</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>Called when Pause button is clicked</li>
+<li>Makes the value of interval the minimum possible, so that the delay (2600-100) is maximum.</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-js" id="org124f23b"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">pause</span>(){
+  document.getElementById(<span style="font-style: italic;">"interval"</span>).value = 100;
+  change_interval();
+};
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org49547ee" class="outline-2">
+<h2 id="org49547ee"><span class="section-number-2">9</span> Function Start sort</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>Called when Start is clicked on the webpage</li>
+<li>Starts the sorting regime</li>
+<li>Initializes variables that are going to be used</li>
+<li>Calls the required function based on the sorting algorithm</li>
+<li>Set the interval by calling change_interval</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-js" id="orgc4ab66f">
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">start_sort</span>()
+{
+  <span style="font-weight: bold;">if</span>(bubble_artefact.interval != 0) { clearInterval(bubble_artefact.interval); bubble_artefact.interval = 0; }
+  bubble_artefact.card = document.querySelectorAll(<span style="font-style: italic;">'.card'</span>);
+  bubble_artefact.action = 1;
+  bubble_artefact.finished = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+  bubble_artefact.comparisons = 0;
+  bubble_artefact.swaps = 0;
+  bubble_artefact.fn_name = <span style="font-style: italic;">"opti_bubble"</span>;
+  <span style="font-weight: bold;">switch</span>(bubble_artefact.fn_name)
+  {
+  <span style="font-weight: bold;">case</span> <span style="font-style: italic;">"opti_bubble"</span>:
+    bubble_artefact.iterator1 = 0;
+    bubble_artefact.iterator2 = 1;
+    bubble_artefact.end = 4;
+    bubble_artefact.operation = <span style="font-style: italic;">"Swap"</span>;
+    next_step();
+    <span style="font-weight: bold;">break</span>;
+  }
+  document.getElementById(<span style="font-style: italic;">"next"</span>).onclick = <span style="font-weight: bold;">function</span>() { next_step(); };
+  document.getElementById(<span style="font-style: italic;">"next"</span>).value = <span style="font-style: italic;">"Next"</span>;
+  <span style="font-weight: bold;">if</span>(document.getElementById(<span style="font-style: italic;">"interval"</span>).value == 100)
+  {
+    document.getElementById(<span style="font-style: italic;">"next"</span>).disabled = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+    document.getElementById(<span style="font-style: italic;">"pause"</span>).style.visibility = <span style="font-style: italic;">"hidden"</span>;
+  }
+  <span style="font-weight: bold;">else</span>
+  {
+    document.getElementById(<span style="font-style: italic;">"pause"</span>).style.visibility = <span style="font-style: italic;">"visible"</span>;
+    <span style="font-weight: bold;">if</span>(bubble_artefact.interval == 0)
+      bubble_artefact.interval = setInterval(next_step, 2600-document.getElementById(<span style="font-style: italic;">"interval"</span>).value);
+    <span style="font-weight: bold;">else</span>
+    {
+      clearInterval(bubble_artefact.interval);
+      bubble_artefact.interval = 0;
+    }
+  }
+
+};
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org384b779" class="outline-2">
+<h2 id="org384b779"><span class="section-number-2">10</span> Choosing ordering or array</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>Function to allow user to choose among</li>
+<li>Sorted array, Reverse sorted array, Randomly ordered array</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-js" id="org4ed42ad">
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">change</span>(){
+  <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">text</span> = document.getElementById(<span style="font-style: italic;">"order"</span>).value;
+  <span style="font-weight: bold;">if</span>(text == <span style="font-style: italic;">"sorted"</span>)
+    bubble_artefact.randomcounter = 0;
+  <span style="font-weight: bold;">else</span>
+  <span style="font-weight: bold;">if</span>(text == <span style="font-style: italic;">"reversesorted"</span>)
+    bubble_artefact.randomcounter = 1;
+  <span style="font-weight: bold;">else</span>
+    bubble_artefact.randomcounter = 2;
+  document.getElementById(<span style="font-style: italic;">"next"</span>).onclick = <span style="font-weight: bold;">function</span>() { start_sort(); };
+};
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf45eab2" class="outline-2">
+<h2 id="orgf45eab2"><span class="section-number-2">11</span> Function reload</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li>Used to reload the artefact when Reset button is clicked</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-js" id="org549ee39">
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">reload</span>(){
+  location.reload(<span style="font-weight: bold; text-decoration: underline;">true</span>);
+};
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org8b83190" class="outline-2">
+<h2 id="org8b83190"><span class="section-number-2">12</span> Function setcounter</h2>
+<div class="outline-text-2" id="text-12">
+<ul class="org-ul">
+<li>Used when the artefact is initialized</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-js" id="org8407f2e"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">setcounter</span>(){
+  document.getElementById(<span style="font-style: italic;">"order"</span>).value = <span style="font-style: italic;">"random"</span>;
+};
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9e6bff1" class="outline-2">
+<h2 id="org9e6bff1"><span class="section-number-2">13</span> Tangle</h2>
+<div class="outline-text-2" id="text-13">
+<div class="org-src-container">
+<pre class="src src-js">&lt;&lt;demo-timecomplexity&gt;&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: VLEAD</p>
+<p class="date">Created: 2019-08-26 Mon 15:16</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

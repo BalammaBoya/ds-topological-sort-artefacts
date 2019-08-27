@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-08-26 Mon 15:16 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="VLEAD" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2a7fd63">1. Introduction</a></li>
+<li><a href="#org307bd5c">2. Features of the artefact</a></li>
+<li><a href="#org7b408fb">3. HTML Framework of Simple Bubble Sort</a>
+<ul>
+<li><a href="#orgfe2b527">3.1. Head Section Elements</a></li>
+<li><a href="#org2997bb2">3.2. Body Section Elements</a>
+<ul>
+<li><a href="#org89dbe5d">3.2.1. Instruction box</a></li>
+<li><a href="#orgf63b389">3.2.2. Question</a></li>
+<li><a href="#orgce4f231">3.2.3. Graph Holder</a></li>
+<li><a href="#org0632f59">3.2.4. Graph options</a></li>
+<li><a href="#org8a126a4">3.2.5. Controller Elements</a></li>
+<li><a href="#org3d03136">3.2.6. Comments Box</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgbbf20a3">4. Tangle</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org2a7fd63" class="outline-2">
+<h2 id="org2a7fd63"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This document builds the <code>Kruskals practice</code> interactive
+artefact(HTML)
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org307bd5c" class="outline-2">
+<h2 id="org307bd5c"><span class="section-number-2">2</span> Features of the artefact</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Artefact provides a practice module for Kruskals Algorithm</li>
+<li>User can see a randomly generate graph or work on same graph</li>
+</ul>
+<p>
+as many times as he need.
+</p>
+<ul class="org-ul">
+<li>User can click the <code>New Graph</code> button to work on a new graph at any time.</li>
+<li>User can click the <code>Reset</code> button to work on same graph at any time.</li>
+
+<li>User has two options at each step clciking on a previous selected edge  and clciking on a new edge .</li>
+<li>Clicks on edge for second time if its to be added to be MST.</li>
+<li>Clicks on new edge for first time if its to checked next.</li>
+<li>You receive "Correct" and "Incorrect" accordingly</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7b408fb" class="outline-2">
+<h2 id="org7b408fb"><span class="section-number-2">3</span> HTML Framework of Simple Bubble Sort</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgfe2b527" class="outline-3">
+<h3 id="orgfe2b527"><span class="section-number-3">3.1</span> Head Section Elements</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Title, meta tags and all the links related to Js, CSS of
+this artefact comes under this section.
+</p>
+<div class="org-src-container">
+<pre class="src src-html" id="org98c0e51">
+&lt;<span style="font-weight: bold;">title</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Kruskals</span>&lt;/<span style="font-weight: bold;">title</span>&gt;
+&lt;<span style="font-weight: bold;">meta</span> <span style="font-weight: bold; font-style: italic;">charset</span>=<span style="font-style: italic;">"UTF-8"</span>&gt;
+&lt;<span style="font-weight: bold;">meta</span> <span style="font-weight: bold; font-style: italic;">name</span>=<span style="font-style: italic;">"viewport"</span> <span style="font-weight: bold; font-style: italic;">content</span>=<span style="font-style: italic;">"width=device-width, initial-scale=1.0"</span>&gt;
+&lt;<span style="font-weight: bold;">script</span> <span style="font-weight: bold; font-style: italic;">src</span>=<span style="font-style: italic;">"./../../../docs/static/libs/vis.min.js"</span>&gt;&lt;/<span style="font-weight: bold;">script</span>&gt;
+&lt;<span style="font-weight: bold;">script</span> <span style="font-weight: bold; font-style: italic;">src</span>=<span style="font-style: italic;">"./../js/Algo.js"</span>&gt;&lt;/<span style="font-weight: bold;">script</span>&gt; 
+&lt;<span style="font-weight: bold;">script</span> <span style="font-weight: bold; font-style: italic;">src</span>=<span style="font-style: italic;">"./../js/data.js"</span>&gt;&lt;/<span style="font-weight: bold;">script</span>&gt; 
+&lt;<span style="font-weight: bold;">link</span> <span style="font-weight: bold; font-style: italic;">href</span>=<span style="font-style: italic;">"./../../../docs/static/libs/vis.min.css"</span> <span style="font-weight: bold; font-style: italic;">rel</span>=<span style="font-style: italic;">"stylesheet"</span> <span style="font-weight: bold; font-style: italic;">type</span>=<span style="font-style: italic;">"text/css"</span> /&gt;
+&lt;<span style="font-weight: bold;">link</span> <span style="font-weight: bold; font-style: italic;">rel</span>=<span style="font-style: italic;">"stylesheet"</span> <span style="font-weight: bold; font-style: italic;">type</span>=<span style="font-style: italic;">"text/css"</span> <span style="font-weight: bold; font-style: italic;">href</span>=<span style="font-style: italic;">"http://exp-iiith.vlabs.ac.in/styles/common-styles.css"</span>&gt;
+&lt;<span style="font-weight: bold;">link</span> <span style="font-weight: bold; font-style: italic;">href</span>=<span style="font-style: italic;">"./../css/mst.css"</span> <span style="font-weight: bold; font-style: italic;">rel</span>=<span style="font-style: italic;">"stylesheet"</span> <span style="font-weight: bold; font-style: italic;">type</span>=<span style="font-style: italic;">"text/css"</span> /&gt;
+  
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org2997bb2" class="outline-3">
+<h3 id="org2997bb2"><span class="section-number-3">3.2</span> Body Section Elements</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org89dbe5d" class="outline-4">
+<h4 id="org89dbe5d"><span class="section-number-4">3.2.1</span> Instruction box</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+This is an instruction box, in which the instructions needed
+for the user to perform the experiments are displayed in a
+form of list.
+</p>
+<div class="org-src-container">
+<pre class="src src-html" id="orgd807660"> &lt;<span style="font-weight: bold;">div</span> <span style="font-weight: bold; font-style: italic;">class</span>=<span style="font-style: italic;">"instruction-box"</span>&gt;
+ &lt;<span style="font-weight: bold;">button</span> <span style="font-weight: bold; font-style: italic;">class</span>=<span style="font-style: italic;">"collapsible"</span>&gt; Instructions &lt;/<span style="font-weight: bold;">button</span>&gt;
+        &lt;<span style="font-weight: bold;">div</span> class =<span style="font-style: italic;">"content"</span>&gt;
+        &lt;<span style="font-weight: bold;">ul</span>&gt;
+        &lt;<span style="font-weight: bold;">li</span>&gt;Select the node that can be added to topologically sorted order.&lt;/<span style="font-weight: bold;">li</span>&gt;
+        &lt;<span style="font-weight: bold;">li</span>&gt;Click on &lt;<span style="font-weight: bold;">b</span>&gt;<span style="font-weight: bold;">Reset</span>&lt;/<span style="font-weight: bold;">b</span>&gt; to start over with a same graph&lt;/<span style="font-weight: bold;">li</span>&gt;
+        &lt;<span style="font-weight: bold;">li</span>&gt;Click on &lt;<span style="font-weight: bold;">b</span>&gt;<span style="font-weight: bold;">New Graph</span>&lt;/<span style="font-weight: bold;">b</span>&gt; to start over with a new graph&lt;/<span style="font-weight: bold;">li</span>&gt;
+        &lt;<span style="font-weight: bold;">li</span>&gt;Zoom or Adjust graph by dragging nodes according to your convience&lt;/<span style="font-weight: bold;">li</span>&gt;  
+      &lt;/<span style="font-weight: bold;">ul</span>&gt; 
+    &lt;/<span style="font-weight: bold;">div</span>&gt;
+   &lt;/<span style="font-weight: bold;">div</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgf63b389" class="outline-4">
+<h4 id="orgf63b389"><span class="section-number-4">3.2.2</span> Question</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+This is question user should answer.
+</p>
+<div class="org-src-container">
+<pre class="src src-html" id="orga59b3e8">&lt;<span style="font-weight: bold;">div</span> <span style="font-weight: bold; font-style: italic;">id</span>=<span style="font-style: italic;">"que"</span>&gt;
+&lt;<span style="font-weight: bold;">b</span>&gt;<span style="font-weight: bold;">Question :</span>&lt;/<span style="font-weight: bold;">b</span>&gt;
+An arrow from 'a' to 'b' represents that 'b' can be done only after finishing 'a'.
+The given graphs indicate different jobs of a company. Help the company manager assign jobs in an order so that no employee needs to wait for other job to be done.
+&lt;/<span style="font-weight: bold;">div</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgce4f231" class="outline-4">
+<h4 id="orgce4f231"><span class="section-number-4">3.2.3</span> Graph Holder</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<p>
+This is a graph holder, which contains graph in canvas 
+where the graphs are randomly created
+</p>
+<div class="org-src-container">
+<pre class="src src-html" id="orga1b0a82">
+&lt;<span style="font-weight: bold;">div</span> <span style="font-weight: bold; font-style: italic;">style</span>=<span style="font-style: italic;">"font-size: 1.5vw;"</span>&gt;
+        &lt;<span style="font-weight: bold;">p</span> <span style="font-weight: bold; font-style: italic;">id</span>=<span style="font-style: italic;">"seq"</span>&gt;&lt;<span style="font-weight: bold;">b</span>&gt;<span style="font-weight: bold;">Selected Order : </span>&lt;/<span style="font-weight: bold;">b</span>&gt;&lt;/<span style="font-weight: bold;">p</span>&gt;
+      &lt;/<span style="font-weight: bold;">div</span>&gt;
+      
+  &lt;<span style="font-weight: bold;">center</span>&gt;   
+ &lt;<span style="font-weight: bold;">div</span> <span style="font-weight: bold; font-style: italic;">id</span>=<span style="font-style: italic;">"graph"</span>&gt;&lt;/<span style="font-weight: bold;">div</span>&gt; 
+&lt;/<span style="font-weight: bold;">center</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0632f59" class="outline-4">
+<h4 id="org0632f59"><span class="section-number-4">3.2.4</span> Graph options</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<p>
+The graph is configured here according to requrirements
+</p>
+<div class="org-src-container">
+<pre class="src src-html" id="orgfd85fb1">
+&lt;<span style="font-weight: bold;">script</span> <span style="font-weight: bold; font-style: italic;">src</span>=<span style="font-style: italic;">"./../js/topo_exercise.js"</span>&gt;&lt;/<span style="font-weight: bold;">script</span>&gt; 
+ 
+</pre>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org8a126a4" class="outline-4">
+<h4 id="org8a126a4"><span class="section-number-4">3.2.5</span> Controller Elements</h4>
+<div class="outline-text-4" id="text-3-2-5">
+<p>
+This are the controller buttons(Start, Reset, Pause) of an
+artefacts used for performing/demonstrating the artefact.
+</p>
+<div class="org-src-container">
+<pre class="src src-html" id="orgc91f2ba">
+&lt;<span style="font-weight: bold;">div</span> <span style="font-weight: bold; font-style: italic;">class</span>=<span style="font-style: italic;">"buttons"</span>&gt;
+  &lt;<span style="font-weight: bold;">button</span> <span style="font-weight: bold; font-style: italic;">onclick</span>=<span style="font-style: italic;">"reset()"</span> <span style="font-weight: bold; font-style: italic;">class</span>=<span style="font-style: italic;">"button-input"</span>&gt;Reset&lt;/<span style="font-weight: bold;">button</span>&gt;
+  &lt;<span style="font-weight: bold;">button</span> <span style="font-weight: bold; font-style: italic;">onclick</span>=<span style="font-style: italic;">"regen()"</span> <span style="font-weight: bold; font-style: italic;">class</span>=<span style="font-style: italic;">"button-input"</span>&gt;New Graph&lt;/<span style="font-weight: bold;">button</span>&gt;
+  &lt;<span style="font-weight: bold;">button</span> <span style="font-weight: bold; font-style: italic;">onclick</span>=<span style="font-style: italic;">"undo()"</span> <span style="font-weight: bold; font-style: italic;">class</span>=<span style="font-style: italic;">"button-input"</span>&gt;Undo&lt;/<span style="font-weight: bold;">button</span>&gt;
+  &lt;<span style="font-weight: bold;">button</span> <span style="font-weight: bold; font-style: italic;">onclick</span>=<span style="font-style: italic;">"submit()"</span> <span style="font-weight: bold; font-style: italic;">class</span>=<span style="font-style: italic;">"button-input"</span>&gt;Submit&lt;/<span style="font-weight: bold;">button</span>&gt;
+  &lt;/<span style="font-weight: bold;">div</span>&gt;
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3d03136" class="outline-4">
+<h4 id="org3d03136"><span class="section-number-4">3.2.6</span> Comments Box</h4>
+<div class="outline-text-4" id="text-3-2-6">
+<p>
+This is a box in which the comments gets displayed based on
+what is happening currently in the artefact.
+</p>
+<div class="org-src-container">
+<pre class="src src-html" id="orgecf8a3a"> 
+
+&lt;<span style="font-weight: bold;">div</span> <span style="font-weight: bold; font-style: italic;">id</span>=<span style="font-style: italic;">"instruction"</span>class=<span style="font-style: italic;">"comment-box"</span>&gt;
+  &lt;<span style="font-weight: bold;">b</span>&gt;<span style="font-weight: bold;">Observations:</span>&lt;/<span style="font-weight: bold;">b</span>&gt;&lt;<span style="font-weight: bold;">br</span>&gt;
+  &lt;<span style="font-weight: bold;">p</span> id = <span style="font-style: italic;">"ins"</span>&gt; &lt;/<span style="font-weight: bold;">p</span>&gt;
+&lt;/<span style="font-weight: bold;">div</span>&gt;
+&lt;<span style="font-weight: bold;">script</span> <span style="font-weight: bold; font-style: italic;">src</span>=<span style="font-style: italic;">"http://exp-iiith.vlabs.ac.in/styles/instruction-box.js"</span>&gt;&lt;/<span style="font-weight: bold;">script</span>&gt;  
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgbbf20a3" class="outline-2">
+<h2 id="orgbbf20a3"><span class="section-number-2">4</span> Tangle</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span style="font-weight: bold;">!DOCTYPE</span> HTML&gt;
+&lt;<span style="font-weight: bold;">html</span> <span style="font-weight: bold; font-style: italic;">lang</span>=<span style="font-style: italic;">"en"</span>&gt;
+  &lt;<span style="font-weight: bold;">head</span>&gt;
+    &lt;&lt;<span style="font-weight: bold;">head-section-elems</span>&gt;&gt;
+  &lt;/<span style="font-weight: bold;">head</span>&gt;
+    &lt;&lt;<span style="font-weight: bold;">instruction-box</span>&gt;&gt; 
+    &lt;&lt;<span style="font-weight: bold;">question-prims</span>&gt;&gt;
+    &lt;&lt;<span style="font-weight: bold;">graph-holder</span>&gt;&gt;
+    &lt;&lt;<span style="font-weight: bold;">graph-configure</span>&gt;&gt;
+    &lt;&lt;<span style="font-weight: bold;">comments-box</span>&gt;&gt;
+    &lt;&lt;<span style="font-weight: bold;">controller-elems</span>&gt;&gt;
+  &lt;/<span style="font-weight: bold;">body</span>&gt;
+&lt;/<span style="font-weight: bold;">html</span>&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: VLEAD</p>
+<p class="date">Created: 2019-08-26 Mon 15:16</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

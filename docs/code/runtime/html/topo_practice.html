@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    
+    <title>Kruskals</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./../../../docs/static/libs/vis.min.js"></script>
+    <script src="./../js/Algo.js"></script> 
+    <script src="./../js/data.js"></script> 
+    <link href="./../../../docs/static/libs/vis.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="http://exp-iiith.vlabs.ac.in/styles/common-styles.css">
+    <link href="./../css/mst.css" rel="stylesheet" type="text/css" />
+      
+  </head>
+     <div class="instruction-box">
+     <button class="collapsible"> Instructions </button>
+            <div class ="content">
+            <ul>
+           <li>Select the node that can be added to topologically sorted order.</li>
+            <li>Click on the undo to undo the previous step.</li> 
+            <li>Click on <b>Reset</b> to start over with a same graph</li>
+            <li>Click on <b>New Graph</b> to start over with a new graph</li>
+            <li>Zoom or Adjust graph by dragging nodes according to your convience</li>  
+          </ul> 
+        </div>
+       </div> 
+    
+    
+    <div style="font-size: 1.5vw;">
+            <p id="seq"><b>Sorted Order : </b></p>
+          </div>
+          
+      <center>   
+     <div id="graph"></div> 
+    </center>
+    
+    <script src="./../js/topo_practice.js"></script> 
+     
+    
+    
+    <div id="instruction"class="comment-box">
+      <b>Observations:</b><br>
+      <p id = "ins"> </p>
+    </div>
+    <script src="http://exp-iiith.vlabs.ac.in/styles/instruction-box.js"></script>  
+    
+    
+    <div class="buttons">
+      <button onclick="reset()" class="button-input">Reset</button>
+      <button onclick="regen()" class="button-input">New Graph</button>
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,67 @@
+br {
+    font-size: 2vw;
+}
+#graph {
+    position: relative;
+    padding-top:1vw;
+    height: 25vw;
+}
+#que{
+  position: relative;
+  font-family:arial;
+  font-size: 1.5vw;
+  padding:1vw;
+  }
+
+#legend {
+  position: absolute;
+}
+.legend span{
+    float: left;
+    width: 3.5vw;
+    height: 0.5vw;
+    margin-right: 0.5vw;
+  border-radius: 0%;
+  border:0vw;
+  margin-top:0.175vw;
+  }
+
+.legend .lim {background-color: #83F52C;margin-top:0.7vw;height:0.27vw;}  
+.legend .blac {background-color: black;margin-top:0.7vw;height:0.2vw;}
+.legend .grey {background-color: grey;margin-top:0.7vw;height:0.2vw;}  
+.legend .vio {background-color: darkblue;margin-top:0.7vw;height:0.2vw;}  
+.legend .blu {background-color: #2C9AD1;margin-top:0.7vw;height:0.27vw;}
+.legend .brow{background-color: brown;margin-top:0.7vw;height:0.2vw;}
+
+
+
+#instruction {
+    position: relative;
+    margin-top:1vw;
+    left: 35%;
+    height: 9vw;
+}
+
+.buttons {
+    display: block;
+    width: 100%;
+    text-align: center;
+    position:relative;
+    overflow: auto;
+    z-index: 1;  
+   }
+  .buttons button{
+    z-index: 1;
+    width: 15%;
+  }
+
+  #ranger {
+    
+    position: relative;
+    font-size: 1.5vw;
+    width:40%;
+    z-index: 1;
+   }
+  .slider{
+    width:30%;
+   }

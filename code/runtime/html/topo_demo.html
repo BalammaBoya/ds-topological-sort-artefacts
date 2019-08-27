@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    
+    <title>Kruskals</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./../../../docs/static/libs/vis.min.js"></script>
+    <script src="./../js/Algo.js"></script> 
+    <script src="./../js/data.js"></script> 
+    <link href="./../../../docs/static/libs/vis.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="http://exp-iiith.vlabs.ac.in/styles/common-styles.css">
+    <script src="./../../../docs/static/libs/vis.anim.js"></script>
+    <link href="./../css/mst.css" rel="stylesheet" type="text/css" />
+    <script src="./../../../docs/static/libs/vis.anim.js"></script>
+      
+  </head>
+     <div class="instruction-box">
+      <button class="collapsible"> Instructions </button>
+            <div class ="content">
+            <li>Click on <b>Start</b> to start demo with given graph</li>
+            <li>After clicking start click on <b>Next</b> to move a step forward</li>
+            <li>You can click on <b>Pause</b> or <b>Play</b> to pause or play the demo and adjust speed using speed adjust slider</li>
+            <li>Click on <b>New Graph</b> to start over with a new graph</li>
+            <li>Click on <b>Restart</b> to start over with a same graph</li>
+              <li>Zoom or Adjust graph by dragging nodes according to your convience</li>  
+        </div>
+       </div> 
+    
+    
+    <div style="font-size: 1.5vw;">
+            <p id="seq"><b>Selected Order : </b></p>
+          </div>
+    
+    
+      <center>   
+     <div id="graph"></div> 
+    </center>
+    
+    <script src="./../js/topo_demo.js"></script> 
+     
+       
+    
+    <div id="instruction"class="comment-box">
+      <b>Observations</b><br>
+      <p id = "ins"> </p>
+    </div>
+    <script src="http://exp-iiith.vlabs.ac.in/styles/instruction-box.js"></script>  
+    
+    
+    <center>
+     <div >
+          <p id= "ranger">
+            Min.Speed
+            <input type="range" id="myRange" class="slider">
+            Max.Speed
+          </p>
+        </div>
+       </center>
+    <div class="buttons">
+      <button id="startnext" onclick="start()"class="button-input">Start</button>
+      <button onclick="regen()"class="button-input">New Graph</button>
+      <button onclick="reset()"class="button-input">Reset</button>
+      <button id="pause" onclick="playPause()"class="button-input">Pause</button>  
+    </div>
+    
+  </body>
+</html>
